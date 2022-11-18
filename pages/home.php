@@ -26,6 +26,17 @@
                                     <th>Address</th>
                                     <th>Phone</th>
                                 </tr>
+                              <?php  foreach($getStudents as $studnet){ ?>
+                                    <tr>
+                                        <td><?php echo $studnet['id'];?></td>
+                                        <td><?php echo $studnet['name'];?></td>
+                                        <td><?php echo $studnet['email'];?></td>
+                                        <td><?php echo $studnet['address'];?></td>
+                                        <td><?php echo $studnet['phone'];?></td>
+                                    </tr>
+
+
+                              <?php  } ?>
 
                             </table>
                         </div>
