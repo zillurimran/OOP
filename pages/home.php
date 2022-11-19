@@ -26,6 +26,7 @@
                                     <th>Address</th>
                                     <th>Phone</th>
                                 </tr>
+                                
                               <?php  foreach($getStudents as $studnet){ ?>
                                     <tr>
                                         <td><?php echo $studnet['id'];?></td>
