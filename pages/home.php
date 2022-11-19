@@ -20,8 +20,18 @@
                 <li>
                     <a href="" class="nav-link">About</a>
                 </li>
-                <li>
-                    <a href="" class="nav-link">Product</a>
+                <li class="dropdown">
+                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Product Category</a>
+                    <ul class="dropdown-menu">
+                        <?php foreach ($getCategories as $category) { ?>
+                        <li>
+                            <a href="" class="dropdown-item">
+                                <?php echo $category['name'] ?>
+                            </a>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                    
                 </li>
                 <li>
                     <a href="" class="nav-link">Contact</a>
@@ -79,4 +89,4 @@
 
 <script src="asset/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 
