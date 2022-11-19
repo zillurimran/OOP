@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
+    <section class="mb-5">
+       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+       <div class="container">
+            <a href="" class="navbar-brand">Logo</a>
+            <ul class="navbar-nav">
+                <li>
+                    <a href="" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">About</a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">Product</a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+       </nav>
+    </section>
     <section>
         <div class="container">
             <div class="row">
@@ -27,13 +48,20 @@
                                     <th>Phone</th>
                                 </tr>
                                 
-                              <?php  foreach($getStudents as $studnet){ ?>
+                              <?php  foreach($getStudents as $student){ ?>
                                     <tr>
-                                        <td><?php echo $studnet['id'];?></td>
-                                        <td><?php echo $studnet['name'];?></td>
-                                        <td><?php echo $studnet['email'];?></td>
-                                        <td><?php echo $studnet['address'];?></td>
-                                        <td><?php echo $studnet['phone'];?></td>
+                                        <td><?php echo $student['id'];?></td>
+                                        <td><?php echo $student['name'];?></td>
+                                        <td><?php echo $student['email'];?></td>
+                                        <td><?php echo $student['address'];?></td>
+                                        <td><?php
+                                           foreach ($student as $phone){
+                                               if(is_array($phone)){
+                                                   echo $phone['Phone_1']." | ".$phone['Phone_2'];
+                                               }
+                                           }
+
+                                            ?></td>
                                     </tr>
 
 
